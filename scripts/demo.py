@@ -2,20 +2,25 @@ import sensor, lcd, time
 import KPU as kpu
 import utime
 
-boot_start_time = utime.ticks_ms()
 first_object_detected = False
 #lcd.init()
 #lcd.rotation(2)
+boot_start_time = utime.ticks_ms()
 sensor.reset(dual_buff=True)
+
 sensor.set_pixformat(sensor.RGB565)
 sensor.set_framesize(sensor.QVGA)
+
 sensor.set_vflip(1)
 sensor.set_hmirror(1)
+
 sensor.set_windowing((224,224))
 sensor.run(1)
 
+
 clock = time.clock()
 classes = ["person", "bird", "cat", "cow", "dog", "horse", "sheep", "aeroplane", "bicycle", "boat", "bus", "car", "motorbike", "train","bottle", "chair", "diningtable", "pottedplant", "sofa", "tvmonitor"]
+
 
 task = kpu.load(0x300000)
 a = kpu.set_outputs(task, 0, 7, 7, 125)
