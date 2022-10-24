@@ -1,0 +1,2 @@
+// const char* mbnet_label_name[4]={"Dycode", "DycodeX", "Adidas", "Unknown"};
+const char* mbnet_label_name[20]= {"person", "bird", "cat", "cow", "dog", "horse", "sheep", "aeroplane", "bicycle", "boat", "bus", "car", "motorbike", "train","bottle", "chair", "diningtable", "pottedplant", "sofa", "tvmonitor"};

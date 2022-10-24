@@ -40,16 +40,23 @@ MobileNet mbnet(KPU, lcd, camera);
 //Specific for this demo
 uint8_t detectedCount = 0;
 const char *MSG_HAPPY = "Happy 12th Birthday!";
+unsigned long bootStart;
+bool timePrinted = false;
 
 void setup()
 {
+    bootStart = millis();
     Serial.begin(115200);
-    while (!Serial) {
-        ; // wait for serial port to connect. Needed for native USB port only
-    }
-    
+    // while (!Serial) {
+    //     ; // wait for serial port to connect. Needed for native USB port only
+    // }
+
+
+    Serial.print("Serial up in ");
+    Serial.println(millis() - bootStart);
+
     mbnet.setScreenRotation(3);
-    
+
 #if PASSTHROUGH
     int ret = mbnet.begin();
 #else
@@ -60,10 +67,22 @@ void setup()
         printf("Mobile net init is failed with err: %d\n", ret);
         while(1);
     }
+
+    Serial.print("Booted in ");
+    Serial.println(millis() - bootStart);
+
+    mbnet.detect();
+    if (timePrinted == false) {
+      timePrinted = true;
+      Serial.print("First classification in ");
+      Serial.println(millis() - bootStart);
+    }
 }
 
 void loop()
 {
+
+
     if(mbnet.detect() != 0)
     {
 #if !PASSTHROUGH

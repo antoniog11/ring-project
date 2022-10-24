@@ -32,7 +32,7 @@ MobileNet::~MobileNet()
         free(_modelData);
 }
 
-int MobileNet::begin() 
+int MobileNet::begin()
 {
     if (!_camera.begin())
         return -1;
@@ -45,12 +45,12 @@ int MobileNet::begin()
     _lcd.setRotation(_rotation);
 
     printCenterOnLCD(_lcd, MSG_LOADING, LABEL_TEXT_SIZE);
-    delay(500); //So, I can see some message, not really needed
+    // delay(500); //So, I can see some message, not really needed
 
     return 0;
 }
 
-int MobileNet::beginWithModelData(uint8_t *model_data, float threshold) 
+int MobileNet::beginWithModelData(uint8_t *model_data, float threshold)
 {
     _threshold = threshold;
     int ret = begin();
@@ -87,7 +87,7 @@ int MobileNet::beginWithModelName(const char *kmodel_name, float threshold)
     if (!myFile)
         return -4;
     uint32_t fSize = myFile.size();
-    
+
     _modelData = (uint8_t *)malloc(fSize);
     if (!_modelData)
     {
@@ -114,7 +114,7 @@ int MobileNet::beginWithModelName(const char *kmodel_name, float threshold)
     return 0;
 }
 
-size_t MobileNet::printCenterOnLCD(Sipeed_ST7789 &lcd_, const char *msg, uint8_t textSize) 
+size_t MobileNet::printCenterOnLCD(Sipeed_ST7789 &lcd_, const char *msg, uint8_t textSize)
 {
     lcd_.setCursor((lcd_.width() - (6 * textSize * strlen(msg))) / 2, (lcd_.height() - (8*textSize)) / 2);
     return lcd_.print(msg);
@@ -126,7 +126,7 @@ int MobileNet::detect()
     if (img == nullptr || img == 0) {
         return -1;
     }
-    
+
     if (_modelLoaded != KPU_ERROR_NONE) {
         return _modelLoaded;
     }
@@ -152,7 +152,7 @@ void MobileNet::show()
 {
     char predLabel[64];// = "Unknown";
     uint16_t *img;
-    
+
     int16_t validLabelIdx = -1;
     lastPredictionLabelIndex = -1;
 
@@ -161,7 +161,7 @@ void MobileNet::show()
 #endif
 
     if (_modelLoaded == KPU_ERROR_NONE) {
-        
+
         _labelCount /= sizeof(float);
 
         label_indices_init();
@@ -174,7 +174,7 @@ void MobileNet::show()
 
         float firstProb;
         const char *firstName;
-        
+
 #if USING_STATISTICS
         label_stats(&firstIdx, &secondIdx);
 
@@ -208,7 +208,7 @@ void MobileNet::show()
         }
     }
     else {
-        sprintf(predLabel, "%s", MSG_INSTRUCTION);
+        // sprintf(predLabel, "%s", MSG_INSTRUCTION);
         // sprintf(predLabel, "%s (%.2f%s)", "Unknown", (1.0*100), "%");
     }
 
@@ -236,7 +236,7 @@ void MobileNet::show()
         // printf("x %d, x1 %d\n", textX, (uint16_t)(strlen(predLabel)*1.0f*LABEL_TEXT_SIZE*8));
         _lcd.setCursor(textX, imgY + _camera.height() + 10);
     }
-    else {   
+    else {
         _lcd.setCursor(4, 0);
     }
 
@@ -244,7 +244,7 @@ void MobileNet::show()
     _lcd.print(predLabel);
 
     //Print second prediction, if any valid prediction
-    if (validLabelIdx > -1) {        
+    if (validLabelIdx > -1) {
 
         float scndProb;
         const char *scndName;
@@ -259,18 +259,19 @@ void MobileNet::show()
         // const char *scndName = labels[_labelIndices[1]];
 #endif
 
-        if (_rotation == 3 || _rotation == 1) {          
-            sprintf(predLabel, "%s (%.2f%s)", scndName, (scndProb*100), "%");  
+        if (_rotation == 3 || _rotation == 1) {
+            sprintf(predLabel, "%s (%.2f%s)", scndName, (scndProb*100), "%");
             uint16_t textX = (uint16_t)((_lcd.width() - (strlen(predLabel)*1.0f*LABEL_TEXT_SIZE*6))/2);
             _lcd.setCursor(textX, imgY + _camera.height() + 10 + 8*LABEL_TEXT_SIZE + 8);
         }
         else {
             _lcd.setCursor(4, 1*(8*LABEL_TEXT_SIZE + 8));
-            sprintf(predLabel, "%s (%.2f%s)", scndName, (scndProb*100), "%"); 
+            sprintf(predLabel, "%s (%.2f%s)", scndName, (scndProb*100), "%");
         }
         _lcd.print(predLabel);
     }
-    
+
+
 #if USING_STATISTICS
     // printf("valid idx: %d\n", validLabelIdx);
     // for(int x = 0; x < STATISTICS_NUM; x++) {
@@ -283,7 +284,7 @@ void MobileNet::show()
 #if USING_STATISTICS
 void MobileNet::label_stats(uint8_t *firstIdxOut, uint8_t *secondIdxOut) {
 
-    uint8_t i, j;   
+    uint8_t i, j;
     float prob;
     const char *name;
 
@@ -341,7 +342,7 @@ void MobileNet::label_stats(uint8_t *firstIdxOut, uint8_t *secondIdxOut) {
     }
     float firstMax = _statistics[0].sum;
     float secondMax = 0;
-    
+
     for (i = 0; i < STATISTICS_NUM; ++i)
     {
         if (_statistics[i].name)
@@ -388,7 +389,7 @@ void MobileNet::label_sort()
                 tmp_prob = _kpuResult[i];
                 _kpuResult[i] = _kpuResult[i+1];
                 _kpuResult[i+1] = tmp_prob;
-                
+
                 tmp_index = _labelIndices[i];
                 _labelIndices[i] = _labelIndices[i+1];
                 _labelIndices[i+1] = tmp_index;

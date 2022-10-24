@@ -480,10 +480,7 @@ public:
             char msgbuf[64] = {
                 0,
             };
-            // std::snprintf(msgbuf, sizeof(msgbuf),
-            //               "Index %td is out of range for span of size %td", idx,
-            //               size());
-            snprintf(msgbuf, sizeof(msgbuf),
+            std::snprintf(msgbuf, sizeof(msgbuf),
                           "Index %td is out of range for span of size %td", idx,
                           size());
             throw std::out_of_range{msgbuf};

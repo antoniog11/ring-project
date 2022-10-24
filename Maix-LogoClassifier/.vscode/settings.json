@@ -4,10 +4,18 @@
         "PLATFORMIO_CALLER": "vscode"
     },
     "files.associations": {
-        "*.cpp": "cpp",
-        "dvp.h": "c",
-        "ov2640.h": "c",
-        "plic.h": "c",
-        "stdio.h": "c"
+      "*.cpp": "cpp",
+      "dvp.h": "c",
+      "ov2640.h": "c",
+      "plic.h": "c",
+      "stdio.h": "c",
+      "array": "cpp",
+      "deque": "cpp",
+      "forward_list": "cpp",
+      "string": "cpp",
+      "unordered_map": "cpp",
+      "vector": "cpp",
+      "string_view": "cpp",
+      "initializer_list": "cpp"
     }
 }
