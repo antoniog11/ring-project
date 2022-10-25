@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name kendryte)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/kendryte.lib)(options "")(descr ""))
+  (lib (name ISP1807)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/ISP1807.lib)(options "")(descr ""))
+)
