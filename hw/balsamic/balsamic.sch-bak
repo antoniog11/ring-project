@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L kendryte:K210 U3
 U 1 1 63572052
-P 2450 2300
-F 0 "U3" H 2175 3015 50  0000 C CNN
-F 1 "K210" H 2175 2924 50  0000 C CNN
-F 2 "footprints:Kendryte_K210" H 2200 2900 50  0001 C CNN
-F 3 "" H 2200 2900 50  0001 C CNN
-	1    2450 2300
+P 2150 3500
+F 0 "U3" H 1875 4215 50  0000 C CNN
+F 1 "K210" H 1875 4124 50  0000 C CNN
+F 2 "footprints:Kendryte_K210" H 1900 4100 50  0001 C CNN
+F 3 "" H 1900 4100 50  0001 C CNN
+	1    2150 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -121,6 +121,39 @@ F 1 "ISP1807-LR-RS" H 9375 1401 60  0000 C CNN
 F 2 "ISP1807-LR-RS" H 9350 1340 60  0001 C CNN
 F 3 "" H 8100 1250 60  0000 C CNN
 	1    8100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x24 J1
+U 1 1 635D8B26
+P 6850 4700
+F 0 "J1" H 6930 4692 50  0000 L CNN
+F 1 "Conn_01x24" H 6930 4601 50  0000 L CNN
+F 2 "Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal" H 6850 4700 50  0001 C CNN
+F 3 "~" H 6850 4700 50  0001 C CNN
+	1    6850 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ch552t:CH552T U4
+U 1 1 635F81A0
+P 6600 2850
+F 0 "U4" H 6600 3165 50  0000 C CNN
+F 1 "CH552T" H 6600 3074 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6600 2850 50  0001 C CNN
+F 3 "https://cdn.hackaday.io/files/1696717259204064/CH552%20Datasheet_C111367.zh-CN.en.pdf" H 6600 2850 50  0001 C CNN
+	1    6600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J2
+U 1 1 63606FA1
+P 1300 1500
+F 0 "J2" H 1407 2367 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1407 2276 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_XKB_U262-16XN-4BVC11" H 1450 1500 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1450 1500 50  0001 C CNN
+	1    1300 1500
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

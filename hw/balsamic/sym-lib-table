@@ -1,4 +1,6 @@
 (sym_lib_table
   (lib (name kendryte)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/kendryte.lib)(options "")(descr ""))
   (lib (name ISP1807)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/ISP1807.lib)(options "")(descr ""))
+  (lib (name ch552t)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/ch552t.lib)(options "")(descr ""))
+  (lib (name GD25LQ64)(type Legacy)(uri /Users/maruchikim/Projects/balsamic/hw/libraries/GD25LQ64.lib)(options "")(descr ""))
 )
