@@ -155,3 +155,7 @@ fp-info-cache
 # Exported BOM files
 *.xml *.csv
 
+# DS_store
+.DS_Store
+hw/balsamic/.DS_Store
+
