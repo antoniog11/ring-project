@@ -4164,7 +4164,7 @@
   (symbol (lib_id "Device:Antenna_Chip") (at 138.43 195.58 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 5147e84e-9f67-44f1-8b73-f7047f2aa137)
-    (property "Reference" "AE?" (id 0) (at 143.51 191.7699 0)
+    (property "Reference" "AE1" (id 0) (at 143.51 191.7699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Antenna_Chip" (id 1) (at 143.51 194.3099 0)
@@ -5331,7 +5331,7 @@
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/5147e84e-9f67-44f1-8b73-f7047f2aa137"
-      (reference "AE?") (unit 1) (value "Antenna_Chip") (footprint "")
+      (reference "AE1") (unit 1) (value "Antenna_Chip") (footprint "")
     )
     (path "/34606f62-6626-40ba-a39d-83e52aa6dcc2"
       (reference "BT1") (unit 1) (value "GREPOW_Battery") (footprint "footprints:balsamic_grepow_battery")
