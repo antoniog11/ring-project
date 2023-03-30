@@ -157,5 +157,8 @@ fp-info-cache
 
 # DS_store
 .DS_Store
-hw/balsamic/.DS_Store
+**/.DS_Store
+
+# vscode files
+**/.vscode
 
