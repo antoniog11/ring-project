@@ -8,4 +8,5 @@
   (lib (name "max77658_functional")(type "Legacy")(uri "${KIPRJMOD}/libraries/max77658_functional.lib")(options "")(descr ""))
   (lib (name "kendryte-power")(type "KiCad")(uri "${KIPRJMOD}/libraries/kendryte-power.kicad_sym")(options "")(descr ""))
   (lib (name "max38640")(type "Legacy")(uri "${KIPRJMOD}/libraries/MAX38640AENT&plus.lib")(options "")(descr ""))
+  (lib (name "AXT524124-mezzanine-conn")(type "KiCad")(uri "${KIPRJMOD}/libraries/AXT524124.kicad_sym")(options "")(descr ""))
 )
