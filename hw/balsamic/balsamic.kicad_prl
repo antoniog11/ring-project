@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 47,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_nets": [],
@@ -61,8 +61,8 @@
       35,
       36
     ],
-    "visible_layers": "004d000_ffffffff",
-    "zone_display_mode": 0
+    "visible_layers": "0005c45_80000001",
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "balsamic.kicad_prl",
