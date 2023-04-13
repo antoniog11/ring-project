@@ -11,4 +11,7 @@
   (lib (name "AXT524124-mezzanine-conn")(type "KiCad")(uri "${KIPRJMOD}/libraries/AXT524124.kicad_sym")(options "")(descr ""))
   (lib (name "MAX77651BEWVA-T")(type "Legacy")(uri "${KIPRJMOD}/libraries/ul_MAX77651BEWVA-T.lib")(options "")(descr ""))
   (lib (name "Molex505550-2420")(type "KiCad")(uri "${KIPRJMOD}/libraries/505550-2420.kicad_sym")(options "")(descr ""))
+  (lib (name "BMI270")(type "KiCad")(uri "${KIPRJMOD}/libraries/BMI270.kicad_sym")(options "")(descr ""))
+  (lib (name "mill-max-pogo")(type "KiCad")(uri "${KIPRJMOD}/libraries/858-22-003-10-011101.kicad_sym")(options "")(descr ""))
+  (lib (name "mill-max-817")(type "KiCad")(uri "${KIPRJMOD}/libraries/817-22-006-30-001101.kicad_sym")(options "")(descr ""))
 )
