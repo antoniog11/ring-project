@@ -1,4 +1,4 @@
-20500482269324293
+20505526626937293
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -86429,6 +86429,13 @@ test point THT pad
 1
 1
 footprints
+8172200630001101
+817-22-006-30-001101-1
+Connector
+0
+6
+6
+footprints
 ISP1807-LR-RS
 
 
@@ -86471,6 +86478,13 @@ MAX77658AANX&plus_functional
 36
 36
 footprints
+MILL-MAX_858-22-003-10-011101
+
+
+0
+3
+3
+footprints
 MOLEX_505550-2420
 
 
@@ -86491,6 +86505,13 @@ SOIC127P790X216-8N
 0
 8
 8
+footprints
+XDCR_BMI270
+
+
+0
+14
+14
 footprints
 balsamic_grepow_battery
 
