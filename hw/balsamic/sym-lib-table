@@ -14,4 +14,6 @@
   (lib (name "BMI270")(type "KiCad")(uri "${KIPRJMOD}/libraries/BMI270.kicad_sym")(options "")(descr ""))
   (lib (name "mill-max-pogo")(type "KiCad")(uri "${KIPRJMOD}/libraries/858-22-003-10-011101.kicad_sym")(options "")(descr ""))
   (lib (name "mill-max-817")(type "KiCad")(uri "${KIPRJMOD}/libraries/817-22-006-30-001101.kicad_sym")(options "")(descr ""))
+  (lib (name "molex-5034800440")(type "KiCad")(uri "${KIPRJMOD}/libraries/5034800440.kicad_sym")(options "${KIPRJMOD}/libraries/817-22-006-30-001101.kicad_sym")(descr "KiCad"))
+  (lib (name "SPST button")(type "KiCad")(uri "${KIPRJMOD}/libraries/SMD-BUTTON-SKQGAKE010.kicad_sym")(options "")(descr ""))
 )
